@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sCm-ut-Noy" customClass="AGPushNoteView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UuL-KP-nTs">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-Xe-Ypy">
+                            <rect key="frame" x="32" y="1" width="278" height="51"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="51" id="QXM-v1-qDy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyY-Vi-sMR">
+                            <rect key="frame" x="142" y="53" width="34" height="4"/>
+                            <color key="backgroundColor" red="0.80922585729999996" green="0.68658101559999996" blue="0.36131811139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="SqW-Zy-wtb"/>
+                                <constraint firstAttribute="width" constant="34" id="Y0e-Ft-jYC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Push_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="pJx-2e-BRH">
+                            <rect key="frame" x="5" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Nss-4i-N08"/>
+                                <constraint firstAttribute="width" constant="20" id="Q1R-7c-JTe"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.93774079623287676" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pJx-2e-BRH" firstAttribute="leading" secondItem="UuL-KP-nTs" secondAttribute="leading" constant="5" id="3sZ-Z4-8CY"/>
+                        <constraint firstAttribute="trailing" secondItem="ZnU-Xe-Ypy" secondAttribute="trailing" constant="10" id="Fzy-RM-eIX"/>
+                        <constraint firstItem="ZnU-Xe-Ypy" firstAttribute="top" secondItem="UuL-KP-nTs" secondAttribute="top" constant="1" id="Hoy-Ub-r4i"/>
+                        <constraint firstItem="ZnU-Xe-Ypy" firstAttribute="leading" secondItem="pJx-2e-BRH" secondAttribute="trailing" constant="7" id="PkO-Hn-270"/>
+                        <constraint firstItem="JyY-Vi-sMR" firstAttribute="centerX" secondItem="UuL-KP-nTs" secondAttribute="centerX" constant="-1" id="Ugx-l1-PlF"/>
+                        <constraint firstItem="pJx-2e-BRH" firstAttribute="top" secondItem="UuL-KP-nTs" secondAttribute="top" constant="10" id="WIP-9O-IgU"/>
+                        <constraint firstAttribute="bottom" secondItem="JyY-Vi-sMR" secondAttribute="bottom" constant="4" id="nVG-Jg-l9G"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.79546987410071945" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UuL-KP-nTs" firstAttribute="leading" secondItem="sCm-ut-Noy" secondAttribute="leading" id="7y7-DU-FcJ"/>
+                <constraint firstItem="UuL-KP-nTs" firstAttribute="top" secondItem="sCm-ut-Noy" secondAttribute="top" id="8KB-GP-Rrs"/>
+                <constraint firstAttribute="trailing" secondItem="UuL-KP-nTs" secondAttribute="trailing" id="UJd-Ks-iKV"/>
+                <constraint firstAttribute="bottom" secondItem="UuL-KP-nTs" secondAttribute="bottom" id="XLd-5X-LBK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="UuL-KP-nTs" id="uhw-gi-WmW"/>
+                <outlet property="iConImage" destination="pJx-2e-BRH" id="MAQ-Ve-vhS"/>
+                <outlet property="messageLabel" destination="ZnU-Xe-Ypy" id="OtU-06-nph"/>
+                <outlet property="underlinelbl" destination="JyY-Vi-sMR" id="2bZ-2Y-O51"/>
+            </connections>
+            <point key="canvasLocation" x="486" y="543.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Push_Icon" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

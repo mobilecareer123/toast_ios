@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HowToUseCellOne" id="KGk-i7-Jjw" customClass="HowToUseCellOne" customModule="Toast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-CN-h8P" customClass="ResizableFontButton" customModule="Toast" customModuleProvider="target">
+                        <rect key="frame" x="215" y="0.0" width="106.5" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="eOo-CN-h8P" secondAttribute="height" multiplier="106:35" constant="-26.757142857142867" id="4bY-l2-ywH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <state key="normal" title=" Toastee" image="ic_toastee pink">
+                            <color key="titleColor" red="0.20130256633227958" green="0.20077549909674752" blue="0.20998205085696298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected">
+                            <color key="titleColor" red="0.54901960780000003" green="0.47058823529999999" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dn-Ju-QiC" customClass="ResizableFontButton" customModule="Toast" customModuleProvider="target">
+                        <rect key="frame" x="1" y="0.0" width="107" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="7Dn-Ju-QiC" secondAttribute="height" multiplier="107:35" constant="-27.514285714285705" id="TCy-ZA-lUd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <state key="normal" title=" Initiator" image="ic_initiator orange">
+                            <color key="titleColor" red="0.20130256633227958" green="0.20077549909674752" blue="0.20998205085696298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected">
+                            <color key="titleColor" red="0.54901960780000003" green="0.47058823529999999" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExH-TB-LFj" customClass="ResizableFontButton" customModule="Toast" customModuleProvider="target">
+                        <rect key="frame" x="108" y="0.0" width="106.5" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ExH-TB-LFj" secondAttribute="height" multiplier="106:35" constant="-26.757142857142867" id="Mgf-nX-QTb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <state key="normal" title=" Collaborator" image="ic_member">
+                            <color key="titleColor" red="0.20130256633227958" green="0.20077549909674752" blue="0.20998205085696298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected">
+                            <color key="titleColor" red="0.54901960780000003" green="0.47058823529999999" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daa-gp-fmM">
+                        <rect key="frame" x="0.0" y="43.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.88725724930000005" green="0.8960419745" blue="0.8960419745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Qy8-Hu-vsd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.95291428618624963" green="0.96234908109898476" blue="0.96234908109898476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="ExH-TB-LFj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2ni-jH-tpK"/>
+                    <constraint firstAttribute="trailing" secondItem="daa-gp-fmM" secondAttribute="trailing" id="2qN-B6-KYK"/>
+                    <constraint firstAttribute="trailing" secondItem="eOo-CN-h8P" secondAttribute="trailing" constant="-1.5" id="5Av-eC-INY"/>
+                    <constraint firstItem="daa-gp-fmM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="C0J-bF-JMc"/>
+                    <constraint firstAttribute="bottom" secondItem="daa-gp-fmM" secondAttribute="bottom" id="DkV-Z6-RfE"/>
+                    <constraint firstItem="ExH-TB-LFj" firstAttribute="leading" secondItem="7Dn-Ju-QiC" secondAttribute="trailing" id="Lpz-rk-H9w"/>
+                    <constraint firstAttribute="bottom" secondItem="7Dn-Ju-QiC" secondAttribute="bottom" constant="0.5" id="MmL-ty-Mq6"/>
+                    <constraint firstItem="eOo-CN-h8P" firstAttribute="height" secondItem="7Dn-Ju-QiC" secondAttribute="height" id="PpJ-7t-eWR"/>
+                    <constraint firstItem="eOo-CN-h8P" firstAttribute="width" secondItem="7Dn-Ju-QiC" secondAttribute="width" id="X1P-vA-hen"/>
+                    <constraint firstItem="ExH-TB-LFj" firstAttribute="height" secondItem="7Dn-Ju-QiC" secondAttribute="height" id="ZBo-fQ-SS4"/>
+                    <constraint firstItem="7Dn-Ju-QiC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="dW9-pc-GWS"/>
+                    <constraint firstItem="ExH-TB-LFj" firstAttribute="width" secondItem="7Dn-Ju-QiC" secondAttribute="width" id="eWU-4O-c1B"/>
+                    <constraint firstItem="7Dn-Ju-QiC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eaQ-lI-si7"/>
+                    <constraint firstItem="eOo-CN-h8P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hbA-El-RBq"/>
+                    <constraint firstItem="eOo-CN-h8P" firstAttribute="leading" secondItem="ExH-TB-LFj" secondAttribute="trailing" constant="0.5" id="ibI-e9-L3h"/>
+                    <constraint firstAttribute="bottom" secondItem="eOo-CN-h8P" secondAttribute="bottom" constant="0.5" id="n8K-UB-wcd"/>
+                    <constraint firstAttribute="bottom" secondItem="ExH-TB-LFj" secondAttribute="bottom" constant="0.5" id="z0I-5b-vDl"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_initiator orange" width="23" height="23"/>
+        <image name="ic_member" width="23" height="23"/>
+        <image name="ic_toastee pink" width="23" height="23"/>
+    </resources>
+</document>

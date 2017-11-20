@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditToastCell" rowHeight="194" id="KGk-i7-Jjw" customClass="EditToastCell" customModule="Toast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toast_rectPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="TET-Lj-sa7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
+                        <color key="backgroundColor" red="0.88725724930000005" green="0.8960419745" blue="0.8960419745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="TET-Lj-sa7" secondAttribute="height" multiplier="320:187" constant="-46.203208556149718" id="mq8-8l-6dB"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmq-9y-9Rq">
+                        <rect key="frame" x="0.0" y="0.0" width="311" height="206"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kmq-9y-9Rq" secondAttribute="height" multiplier="312:179" constant="-48.061452513966458" id="hmn-oM-K9m"/>
+                        </constraints>
+                        <state key="normal" image="ic_edit"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BjW-NK-xWp">
+                        <rect key="frame" x="311" y="0.0" width="9" height="224"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="BjW-NK-xWp" secondAttribute="height" multiplier="8:187" id="be5-G6-D0u"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00f-XB-GvF">
+                        <rect key="frame" x="0.0" y="214" width="320" height="10"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="hVW-ZV-LLr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="TET-Lj-sa7" secondAttribute="trailing" id="3gH-tt-Cqd"/>
+                    <constraint firstAttribute="trailing" secondItem="BjW-NK-xWp" secondAttribute="trailing" id="9et-fW-GJQ"/>
+                    <constraint firstItem="kmq-9y-9Rq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OvP-v7-Udc"/>
+                    <constraint firstItem="kmq-9y-9Rq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Xnj-dT-CFF"/>
+                    <constraint firstItem="TET-Lj-sa7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Yfh-rp-Ugk"/>
+                    <constraint firstAttribute="bottom" secondItem="BjW-NK-xWp" secondAttribute="bottom" id="bha-rW-iQX"/>
+                    <constraint firstAttribute="trailing" secondItem="00f-XB-GvF" secondAttribute="trailing" id="cDp-Sc-y4X"/>
+                    <constraint firstItem="BjW-NK-xWp" firstAttribute="leading" secondItem="kmq-9y-9Rq" secondAttribute="trailing" id="jM0-aK-wqh"/>
+                    <constraint firstItem="00f-XB-GvF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kYB-cP-kvt"/>
+                    <constraint firstItem="00f-XB-GvF" firstAttribute="top" secondItem="TET-Lj-sa7" secondAttribute="bottom" id="l8t-mL-c81"/>
+                    <constraint firstItem="TET-Lj-sa7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="omm-pA-0wd"/>
+                    <constraint firstItem="BjW-NK-xWp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xYs-E7-XWi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn_EditPhoto" destination="kmq-9y-9Rq" id="4Vh-tp-Bl5"/>
+                <outlet property="imgView_toast" destination="TET-Lj-sa7" id="Mwp-Mh-g4W"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="5.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Toast_rectPlaceholder" width="320" height="205"/>
+        <image name="ic_edit" width="20" height="20"/>
+    </resources>
+</document>

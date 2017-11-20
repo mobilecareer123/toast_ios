@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCollabCell" rowHeight="227" id="KGk-i7-Jjw" customClass="AddCollabCell" customModule="Toast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="235.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcS-2i-FKL" userLabel="View_txtfieldBG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSV-EA-Ijg">
+                                <rect key="frame" x="0.0" y="0.0" width="7" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="From Group Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-rZ-QPh" customClass="ResizableFontTextField" customModule="Toast" customModuleProvider="target">
+                                <rect key="frame" x="7" y="0.0" width="313" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NLx-rZ-QPh" secondAttribute="height" multiplier="313:34" id="CN2-lt-ede"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardType="alphabet" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NLx-rZ-QPh" secondAttribute="trailing" id="0Cx-6l-GSd"/>
+                            <constraint firstItem="pSV-EA-Ijg" firstAttribute="leading" secondItem="qcS-2i-FKL" secondAttribute="leading" id="2rR-mc-q6G"/>
+                            <constraint firstAttribute="width" secondItem="qcS-2i-FKL" secondAttribute="height" multiplier="160:17" id="GNL-9a-uJH"/>
+                            <constraint firstItem="pSV-EA-Ijg" firstAttribute="top" secondItem="qcS-2i-FKL" secondAttribute="top" id="Gq8-vv-pQA"/>
+                            <constraint firstAttribute="bottom" secondItem="pSV-EA-Ijg" secondAttribute="bottom" id="KYf-Ti-vcn"/>
+                            <constraint firstItem="NLx-rZ-QPh" firstAttribute="leading" secondItem="pSV-EA-Ijg" secondAttribute="trailing" id="TBw-39-raK"/>
+                            <constraint firstItem="NLx-rZ-QPh" firstAttribute="top" secondItem="qcS-2i-FKL" secondAttribute="top" id="iCZ-mA-L6N"/>
+                            <constraint firstAttribute="bottom" secondItem="NLx-rZ-QPh" secondAttribute="bottom" id="w4g-f7-692"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGL-A0-5w3" userLabel="View_notification">
+                        <rect key="frame" x="0.0" y="182" width="320" height="42"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktE-v2-Vki">
+                                <rect key="frame" x="0.0" y="0.0" width="7" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ktE-v2-Vki" secondAttribute="height" multiplier="1:7" constant="1" id="Wl4-1Q-K9U"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-Sf-VgP">
+                                <rect key="frame" x="268" y="6" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="2bi-hf-mON"/>
+                                    <constraint firstAttribute="height" constant="31" id="R0G-oJ-tt5"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive notification when someone cheers?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttW-O0-VNf" customClass="ResizableFontLabel" customModule="Toast" customModuleProvider="target">
+                                <rect key="frame" x="7" y="0.0" width="254" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ttW-O0-VNf" secondAttribute="height" multiplier="254:49" constant="36.285714285714278" id="eBC-AT-Guf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11.699999809265137"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="11.699999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NZy-Sf-VgP" secondAttribute="trailing" constant="3" id="27e-Qk-7kT"/>
+                            <constraint firstItem="NZy-Sf-VgP" firstAttribute="leading" secondItem="ttW-O0-VNf" secondAttribute="trailing" constant="7" id="2H1-U1-2tT"/>
+                            <constraint firstItem="ttW-O0-VNf" firstAttribute="top" secondItem="TGL-A0-5w3" secondAttribute="top" id="2mL-yP-Y1p"/>
+                            <constraint firstAttribute="bottom" secondItem="ktE-v2-Vki" secondAttribute="bottom" id="5xj-Ev-dn5"/>
+                            <constraint firstAttribute="width" secondItem="TGL-A0-5w3" secondAttribute="height" multiplier="320:42" id="6Ab-SL-Y3c"/>
+                            <constraint firstItem="ttW-O0-VNf" firstAttribute="leading" secondItem="ktE-v2-Vki" secondAttribute="trailing" id="Tkt-Zn-Sjq"/>
+                            <constraint firstItem="ktE-v2-Vki" firstAttribute="top" secondItem="TGL-A0-5w3" secondAttribute="top" id="Zbp-e8-IeD"/>
+                            <constraint firstItem="NZy-Sf-VgP" firstAttribute="centerY" secondItem="TGL-A0-5w3" secondAttribute="centerY" id="pXU-fK-m9s"/>
+                            <constraint firstItem="ktE-v2-Vki" firstAttribute="leading" secondItem="TGL-A0-5w3" secondAttribute="leading" id="rPJ-UM-0mu"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A toast to celebrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr6-ee-Ph2" customClass="ResizableFontLabel" customModule="Toast" customModuleProvider="target">
+                        <rect key="frame" x="9" y="36" width="310" height="30.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Vr6-ee-Ph2" secondAttribute="height" multiplier="160:13" constant="-62.538461538461547" id="LYt-PU-5Sf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" red="0.1123889594" green="0.1123889594" blue="0.1123889594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="11"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fqQ-Y3-eg6" customClass="ResizableFontTextView" customModule="Toast" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="67" width="320" height="115"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fqQ-Y3-eg6" secondAttribute="height" multiplier="320:103" constant="-37.281553398058236" id="brj-7z-rO0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGp-bw-c4n">
+                        <rect key="frame" x="0.0" y="224" width="320" height="12"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="Ird-xJ-dtM"/>
+                            <constraint firstAttribute="width" secondItem="hGp-bw-c4n" secondAttribute="height" multiplier="80:3" id="VSs-Dq-yJK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qcS-2i-FKL" secondAttribute="trailing" id="1N4-H2-LCN"/>
+                    <constraint firstItem="fqQ-Y3-eg6" firstAttribute="top" secondItem="Vr6-ee-Ph2" secondAttribute="bottom" id="7di-fB-GAg"/>
+                    <constraint firstAttribute="trailing" secondItem="TGL-A0-5w3" secondAttribute="trailing" id="9er-Hf-nyy"/>
+                    <constraint firstItem="qcS-2i-FKL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ilp-la-nK6"/>
+                    <constraint firstItem="qcS-2i-FKL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LFR-EJ-vOa"/>
+                    <constraint firstItem="Vr6-ee-Ph2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="Nb3-yd-Lk3"/>
+                    <constraint firstAttribute="trailing" secondItem="hGp-bw-c4n" secondAttribute="trailing" id="Nng-xg-Z1l"/>
+                    <constraint firstAttribute="trailing" secondItem="Vr6-ee-Ph2" secondAttribute="trailing" constant="1" id="REC-aG-Id5"/>
+                    <constraint firstItem="TGL-A0-5w3" firstAttribute="top" secondItem="fqQ-Y3-eg6" secondAttribute="bottom" id="TM0-eE-1rk"/>
+                    <constraint firstItem="hGp-bw-c4n" firstAttribute="top" secondItem="TGL-A0-5w3" secondAttribute="bottom" id="kKp-r3-pgj"/>
+                    <constraint firstItem="Vr6-ee-Ph2" firstAttribute="top" secondItem="qcS-2i-FKL" secondAttribute="bottom" constant="2" id="lRP-qy-04g"/>
+                    <constraint firstItem="fqQ-Y3-eg6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="r2c-zj-0K2"/>
+                    <constraint firstItem="TGL-A0-5w3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="r9v-DC-mjG"/>
+                    <constraint firstAttribute="trailing" secondItem="fqQ-Y3-eg6" secondAttribute="trailing" id="rDC-87-P0m"/>
+                    <constraint firstItem="hGp-bw-c4n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rHn-jc-6wA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lbl_TstToCelebrtCategory" destination="Vr6-ee-Ph2" id="Sl4-XP-tmW"/>
+                <outlet property="switch_Notifctn" destination="NZy-Sf-VgP" id="g78-kj-oUy"/>
+                <outlet property="txtFld_GroupName" destination="NLx-rZ-QPh" id="i5Y-xn-vI1"/>
+                <outlet property="txtvw_ToastTheme" destination="fqQ-Y3-eg6" id="FGQ-dW-CzY"/>
+                <outlet property="view_GroupNameBg" destination="qcS-2i-FKL" id="fHa-j6-bv0"/>
+            </connections>
+            <point key="canvasLocation" x="-209" y="-101.5"/>
+        </tableViewCell>
+    </objects>
+</document>

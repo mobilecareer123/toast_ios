@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewToastCell" rowHeight="70" id="6UL-ft-dZh" customClass="NewToastCell" customModule="Toast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6UL-ft-dZh" id="5Ic-Vz-dyF">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.666666666666671"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceL-Cv-8ru">
+                        <rect key="frame" x="0.0" y="55" width="320" height="14"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ceL-Cv-8ru" secondAttribute="height" multiplier="320:14" id="Ngx-Jq-4fE"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-Ze-p2g">
+                        <rect key="frame" x="0.0" y="21" width="320" height="34"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej0-Rr-yhb">
+                                <rect key="frame" x="0.0" y="0.0" width="10.666666666666666" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ej0-Rr-yhb" secondAttribute="height" multiplier="5:17" id="Ljf-7E-iAh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date you intend to Raise this toast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-hN-7JO" customClass="ResizableFontLabel" customModule="Toast" customModuleProvider="target">
+                                <rect key="frame" x="10.666666666666657" y="0.0" width="309.33333333333337" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yyF-hN-7JO" secondAttribute="height" multiplier="155:17" id="hIT-ev-mbN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.74509803919999995" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWV-PA-BcA" customClass="ResizableFontButton" customModule="Toast" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="34"/>
+                                <state key="normal" image="ic_calender"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sx-s4-SH8">
+                                <rect key="frame" x="312" y="0.0" width="8" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9sx-s4-SH8" secondAttribute="height" multiplier="4:17" id="iTs-yK-N5M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9sx-s4-SH8" secondAttribute="trailing" id="6q4-KZ-PvD"/>
+                            <constraint firstAttribute="bottom" secondItem="mWV-PA-BcA" secondAttribute="bottom" id="9c9-RG-l2e"/>
+                            <constraint firstAttribute="bottom" secondItem="9sx-s4-SH8" secondAttribute="bottom" id="AKD-A6-AKB"/>
+                            <constraint firstAttribute="width" secondItem="mPE-Ze-p2g" secondAttribute="height" multiplier="160:17" id="Auv-1u-Wcq"/>
+                            <constraint firstItem="9sx-s4-SH8" firstAttribute="leading" secondItem="mWV-PA-BcA" secondAttribute="trailing" id="H61-VO-Xmj"/>
+                            <constraint firstItem="9sx-s4-SH8" firstAttribute="top" secondItem="mPE-Ze-p2g" secondAttribute="top" id="KGT-nX-3xX"/>
+                            <constraint firstItem="mWV-PA-BcA" firstAttribute="top" secondItem="mPE-Ze-p2g" secondAttribute="top" id="Mbk-d9-W60"/>
+                            <constraint firstItem="mWV-PA-BcA" firstAttribute="leading" secondItem="mPE-Ze-p2g" secondAttribute="leading" id="W00-c1-4De"/>
+                            <constraint firstItem="yyF-hN-7JO" firstAttribute="leading" secondItem="ej0-Rr-yhb" secondAttribute="trailing" id="bKx-MM-6BO"/>
+                            <constraint firstItem="ej0-Rr-yhb" firstAttribute="top" secondItem="mPE-Ze-p2g" secondAttribute="top" id="d1W-qr-N0c"/>
+                            <constraint firstItem="ej0-Rr-yhb" firstAttribute="leading" secondItem="mPE-Ze-p2g" secondAttribute="leading" id="f6n-bu-Hgg"/>
+                            <constraint firstAttribute="trailing" secondItem="yyF-hN-7JO" secondAttribute="trailing" id="iRm-e7-hbi"/>
+                            <constraint firstItem="yyF-hN-7JO" firstAttribute="top" secondItem="mPE-Ze-p2g" secondAttribute="top" id="u2o-kO-jWE"/>
+                            <constraint firstAttribute="bottom" secondItem="ej0-Rr-yhb" secondAttribute="bottom" id="wML-9d-lgB"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date you intend to Raise this Toast:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bE-89-D04" customClass="ResizableFontLabel" customModule="Toast" customModuleProvider="target">
+                        <rect key="frame" x="7" y="0.0" width="313" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="5bE-89-D04" secondAttribute="height" multiplier="104:7" id="5ah-s6-o5c"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11.5"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autoFont" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="11.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="ceL-Cv-8ru" firstAttribute="top" secondItem="mPE-Ze-p2g" secondAttribute="bottom" id="17T-Ua-n9R"/>
+                    <constraint firstItem="mPE-Ze-p2g" firstAttribute="top" secondItem="5bE-89-D04" secondAttribute="bottom" id="Esd-me-aI4"/>
+                    <constraint firstAttribute="trailing" secondItem="5bE-89-D04" secondAttribute="trailing" id="JSI-d4-ZoN"/>
+                    <constraint firstItem="ceL-Cv-8ru" firstAttribute="leading" secondItem="5Ic-Vz-dyF" secondAttribute="leading" id="LeB-ZZ-e2C"/>
+                    <constraint firstItem="5bE-89-D04" firstAttribute="leading" secondItem="5Ic-Vz-dyF" secondAttribute="leading" constant="7" id="Oeo-wX-zv7"/>
+                    <constraint firstAttribute="trailing" secondItem="mPE-Ze-p2g" secondAttribute="trailing" id="Yln-TS-xr4"/>
+                    <constraint firstItem="5bE-89-D04" firstAttribute="top" secondItem="5Ic-Vz-dyF" secondAttribute="top" id="dvW-MT-G6Q"/>
+                    <constraint firstAttribute="trailing" secondItem="ceL-Cv-8ru" secondAttribute="trailing" id="eQE-9o-8Hk"/>
+                    <constraint firstItem="mPE-Ze-p2g" firstAttribute="leading" secondItem="5Ic-Vz-dyF" secondAttribute="leading" id="wQT-cI-flN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="btn_Calendar" destination="mWV-PA-BcA" id="aIb-dr-bos"/>
+                <outlet property="lbl_DueDate" destination="yyF-hN-7JO" id="1My-hs-Uqf"/>
+                <outlet property="view_DueDateBg" destination="mPE-Ze-p2g" id="zfx-uA-Z0C"/>
+            </connections>
+            <point key="canvasLocation" x="-531" y="-312"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_calender" width="22" height="23"/>
+    </resources>
+</document>
