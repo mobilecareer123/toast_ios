@@ -672,14 +672,18 @@ class TEditToastViewController: UIViewController, UITextViewDelegate, UITextFiel
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // hide keyboard
+        self.view.endEditing(true)
         if(tableView == self.table_collaborators)
         {
             self.table_collaborators.isHidden = true
             if self.filteredEmails.count < indexPath.row { return }
-            if(!self.selectedCollaboraterEmails.contains(self.filteredEmails[indexPath.row]))
+            let email = self.filteredEmails[indexPath.row]
+            if(!self.selectedCollaboraterEmails.contains(email))
             {
-                self.selectedCollaboraterEmails.append(self.filteredEmails[indexPath.row])
-                self.addContact(contact: self.filteredEmails[indexPath.row], contactPicker: collaborators_picker)
+                self.selectedCollaboraterEmails.append(email)
+                self.deletedCollaboratorEmails = self.deletedCollaboratorEmails.filter({ $0 != email })
+                self.addContact(contact: email, contactPicker: collaborators_picker)
             }
             self.showsCollaboratorselectedEmails()
         }
@@ -687,10 +691,12 @@ class TEditToastViewController: UIViewController, UITextViewDelegate, UITextFiel
         {
             self.table_toates.isHidden = true
             if self.filteredEmails.count < indexPath.row { return }
-            if(!self.selectedToatesEmails.contains(self.filteredEmails[indexPath.row]))
+            let email = self.filteredEmails[indexPath.row]
+            if(!self.selectedToatesEmails.contains(email))
             {
-                self.selectedToatesEmails.append(self.filteredEmails[indexPath.row])
-                self.addContact(contact: self.filteredEmails[indexPath.row], contactPicker: toastes_picker)
+                self.selectedToatesEmails.append(email)
+                self.deletedToasteeEmails = self.deletedToasteeEmails.filter({ $0 != email })
+                self.addContact(contact: email, contactPicker: toastes_picker)
             }
             self.showsToatesselectedEmails()
         }
@@ -1129,8 +1135,8 @@ extension TEditToastViewController: THContactPickerDelegate {
     func contactPicker(_ contactPicker: THContactPickerView!, textFieldDidBeginEditing textField: UITextField!) {
         if contactPicker == self.toastes_picker
         {
-            self.table_toates.isHidden = false
-            self.table_collaborators.isHidden = true
+            //self.table_toates.isHidden = false
+            //self.table_collaborators.isHidden = true
             
             self.scroll_view.setContentOffset(CGPoint(x:0,y:300), animated: true)
         }
@@ -1142,8 +1148,8 @@ extension TEditToastViewController: THContactPickerDelegate {
                 self.txt_collaborators.text = ""
             }
             
-            self.table_toates.isHidden = true
-            self.table_collaborators.isHidden = false
+            //self.table_toates.isHidden = true
+            //self.table_collaborators.isHidden = false
             
             self.scroll_view.setContentOffset(CGPoint(x:0,y:450), animated: true)
         }
@@ -1161,8 +1167,14 @@ extension TEditToastViewController: THContactPickerDelegate {
     func contactPicker(_ contactPicker: THContactPickerView!, didRemoveContact contact: Any!) {
         guard let contact = contact as? String else { return }
         if contactPicker == toastes_picker {
+            if !self.deletedToasteeEmails.contains(contact) {
+                self.deletedToasteeEmails.append(contact)
+            }
             self.remove(contact: contact, contacts: &self.selectedToatesEmails)
         } else if contactPicker == collaborators_picker {
+            if !self.deletedCollaboratorEmails.contains(contact) {
+                self.deletedCollaboratorEmails.append(contact)
+            }
             self.remove(contact: contact, contacts: &self.selectedCollaboraterEmails)
         }
     }
