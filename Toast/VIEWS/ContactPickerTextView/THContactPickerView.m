@@ -157,7 +157,7 @@
 }
 
 - (void)addContact:(id)contact withName:(NSString *)name withStyle:(THContactViewStyle *)bubbleStyle andSelectedStyle:(THContactViewStyle *)selectedStyle {
-    id contactKey = [NSValue valueWithNonretainedObject:contact];
+    id contactKey = contact;//[NSValue valueWithNonretainedObject:contact];
     if ([self.contactKeys containsObject:contactKey]){
         NSLog(@"Cannot add the same object twice to ContactPickerView");
         return;
@@ -231,8 +231,8 @@
 }
 
 - (void)removeContact:(id)contact {
-    id contactKey = [NSValue valueWithNonretainedObject:contact];
-	[self removeContactByKey:contactKey];
+    //id contactKey = [NSValue valueWithNonretainedObject:contact];
+	[self removeContactByKey:contact];
 }
 
 - (void)setPlaceholderLabelText:(NSString *)text {
@@ -312,7 +312,7 @@
     }
     
     if ([self.delegate respondsToSelector:@selector(contactPicker:didRemoveContact:)]){
-        [self.delegate contactPicker:self didRemoveContact:[contact nonretainedObjectValue]];
+        [self.delegate contactPicker:self didRemoveContact:contact];
     }
     
     [self removeContactByKey:contact];
@@ -551,7 +551,7 @@
     
     id contact = [self contactForContactView:contactView];
     if ([self.delegate respondsToSelector:@selector(contactPicker:didSelectContact:)]){
-        [self.delegate contactPicker:self didSelectContact:[contact nonretainedObjectValue]];
+        [self.delegate contactPicker:self didSelectContact:contact];
     }
     
     [self.textField resignFirstResponder];

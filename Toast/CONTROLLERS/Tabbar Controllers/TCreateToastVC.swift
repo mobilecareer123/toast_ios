@@ -33,7 +33,7 @@ class TCreateToastVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var txt_categories: UITextField!
     @IBOutlet weak var txt_toaste: UITextView!
     
-    @IBOutlet weak var toaste_picker: THContactPickerView!
+    @IBOutlet var toaste_picker: THContactPickerView!
     @IBOutlet weak var suggestion_table: UITableView!
     @IBOutlet weak var scroll_view: UIScrollView!
     
@@ -591,6 +591,7 @@ class TCreateToastVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
         if(tableView == self.suggestion_table)
         {
+            self.suggestion_table.isHidden = true
             print(self.filteredEmails[indexPath.row])
             if(!self.selectedEmails.contains(self.filteredEmails[indexPath.row]))
             {

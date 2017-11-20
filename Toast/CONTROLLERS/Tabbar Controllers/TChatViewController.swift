@@ -462,7 +462,6 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             
             WebService.multipartRequest(postDict: parameters, ProfileImage: toastImg){  (response, error) in
-                if  error != nil { return }
                 print(response)
                 let statusToken:NSString =  NSString(format: "%@",response["status"]! as! NSString)
                 

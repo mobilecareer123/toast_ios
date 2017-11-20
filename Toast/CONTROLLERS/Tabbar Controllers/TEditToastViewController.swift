@@ -21,10 +21,10 @@ class TEditToastViewController: UIViewController, UITextViewDelegate, UITextFiel
     @IBOutlet weak var txt_category: UITextField!
     @IBOutlet weak var txt_toastes: UITextView!
     
-    @IBOutlet weak var toastes_picker: THContactPickerView!
+    @IBOutlet var toastes_picker: THContactPickerView!
     @IBOutlet weak var txt_collaborators: UITextView!
     
-    @IBOutlet weak var collaborators_picker: THContactPickerView!
+    @IBOutlet var collaborators_picker: THContactPickerView!
     @IBOutlet weak var switch_notification: UISwitch!
     @IBOutlet weak var table_toates: UITableView!
     @IBOutlet weak var table_collaborators: UITableView!
@@ -672,9 +672,10 @@ class TEditToastViewController: UIViewController, UITextViewDelegate, UITextFiel
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.isHidden = true
         if(tableView == self.table_collaborators)
         {
+            self.table_collaborators.isHidden = true
+            if self.filteredEmails.count < indexPath.row { return }
             if(!self.selectedCollaboraterEmails.contains(self.filteredEmails[indexPath.row]))
             {
                 self.selectedCollaboraterEmails.append(self.filteredEmails[indexPath.row])
@@ -684,6 +685,8 @@ class TEditToastViewController: UIViewController, UITextViewDelegate, UITextFiel
         }
         else if(tableView == self.table_toates)
         {
+            self.table_toates.isHidden = true
+            if self.filteredEmails.count < indexPath.row { return }
             if(!self.selectedToatesEmails.contains(self.filteredEmails[indexPath.row]))
             {
                 self.selectedToatesEmails.append(self.filteredEmails[indexPath.row])
@@ -1082,8 +1085,8 @@ extension TEditToastViewController: THContactPickerDelegate {
     func contactPicker(_ contactPicker: THContactPickerView!, textFieldDidChange textField: UITextField!) {
         if contactPicker == self.toastes_picker{
             self.filteredEmails.removeAll()
-            self.table_toates.isHidden = false
             guard let textToSearch = textField.text else { return }
+            self.table_toates.isHidden = textToSearch.isEmpty
             for email in self.emailArray
             {
                 if email.lowercased().contains(textToSearch.lowercased())
@@ -1102,8 +1105,8 @@ extension TEditToastViewController: THContactPickerDelegate {
             }
         } else if contactPicker == self.collaborators_picker {
             self.filteredEmails.removeAll()
-            self.table_collaborators.isHidden = false
             guard let textToSearch = textField.text else { return }
+            self.table_collaborators.isHidden = textToSearch.isEmpty
             for email in self.emailArray
             {
                 if email.lowercased().contains(textToSearch.lowercased())

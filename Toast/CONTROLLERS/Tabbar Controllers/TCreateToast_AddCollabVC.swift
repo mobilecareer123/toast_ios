@@ -43,7 +43,7 @@ class TCreateToast_AddCollabVC: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var notification_switch: UISwitch!
     @IBOutlet weak var lbl_category: UILabel!
     
-    @IBOutlet weak var collabolators_picker: THContactPickerView!
+    @IBOutlet var collabolators_picker: THContactPickerView!
     
     var category = ""
     var message = ""
@@ -290,6 +290,7 @@ class TCreateToast_AddCollabVC: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(!self.selectedEmails.contains(self.filteredEmails[indexPath.row]))
         {
+            tableView.isHidden = true
             let email = self.filteredEmails[indexPath.row]
             self.selectedEmails.append(email)
             self.addContact(contact: email, contactPicker: collabolators_picker)
