@@ -1157,6 +1157,23 @@ extension TEditToastViewController: THContactPickerDelegate {
     }
     
     func contactPicker(_ contactPicker: THContactPickerView!, textFieldShouldReturn textField: UITextField!) -> Bool {
+        if let email = textField.text {
+            let email = email.lowercased()
+            if isValidEmail(testStr: email) {
+                if contactPicker == toastes_picker {
+                    if !self.selectedToatesEmails.contains(email) {
+                        self.selectedToatesEmails.append(email)
+                        self.addContact(contact: email, contactPicker: toastes_picker)
+                    }
+                } else if contactPicker == collaborators_picker {
+                    if !self.selectedCollaboraterEmails.contains(email) {
+                        self.selectedCollaboraterEmails.append(email)
+                        self.addContact(contact: email, contactPicker: collaborators_picker)
+                    }
+                }
+            }
+            textField.text = ""
+        }
         return true
     }
     

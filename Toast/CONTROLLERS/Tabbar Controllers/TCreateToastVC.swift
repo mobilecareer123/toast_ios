@@ -1001,6 +1001,14 @@ extension TCreateToastVC: THContactPickerDelegate {
     }
     
     func contactPicker(_ contactPicker: THContactPickerView!, textFieldShouldReturn textField: UITextField!) -> Bool {
+        if let email = textField.text {
+            let email = email.lowercased()
+            if isValidEmail(testStr: email) && !self.selectedEmails.contains(email) {
+                self.selectedEmails.append(email)
+                self.addContact(contact: email, contactPicker: toaste_picker)
+            }
+            textField.text = ""
+        }
         return true
     }
     
