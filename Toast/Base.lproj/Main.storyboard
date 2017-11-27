@@ -4334,7 +4334,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your cheer..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRX-r2-V5c" customClass="ResizableFontTextField" customModule="Toast" customModuleProvider="target">
-                                        <rect key="frame" x="51" y="8" width="219" height="31"/>
+                                        <rect key="frame" x="51" y="8" width="224" height="31"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12.340000152587891"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -4349,21 +4349,17 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X92-Kw-LPj">
-                                        <rect key="frame" x="278" y="8" width="41" height="29"/>
+                                        <rect key="frame" x="278" y="0.0" width="41" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="41" id="KNi-S4-rtI"/>
-                                            <constraint firstAttribute="height" constant="29" id="LPq-jm-ezY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <state key="normal" title="Send ">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="sendMessage:" destination="xqN-zK-WwU" eventType="touchUpInside" id="qOQ-p4-CKI"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWC-Nt-zKU">
-                                        <rect key="frame" x="272" y="5" width="1" height="34"/>
+                                        <rect key="frame" x="277" y="5" width="1" height="34"/>
                                         <color key="backgroundColor" red="0.56507100730000004" green="0.57066576979999994" blue="0.57066576979999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="k2f-WX-vkp"/>
@@ -4377,7 +4373,7 @@
                                 <constraints>
                                     <constraint firstItem="gp7-WL-0Kd" firstAttribute="top" secondItem="Kp2-2b-8Ty" secondAttribute="top" constant="5" id="0HW-ZK-2dZ"/>
                                     <constraint firstItem="IRX-r2-V5c" firstAttribute="leading" secondItem="gp7-WL-0Kd" secondAttribute="trailing" constant="6" id="2OV-Sl-6Gf"/>
-                                    <constraint firstAttribute="bottom" secondItem="X92-Kw-LPj" secondAttribute="bottom" constant="8" id="3dS-oc-bXy"/>
+                                    <constraint firstAttribute="bottom" secondItem="X92-Kw-LPj" secondAttribute="bottom" id="3dS-oc-bXy"/>
                                     <constraint firstAttribute="bottom" secondItem="IRX-r2-V5c" secondAttribute="bottom" constant="6" id="9Hz-aT-Z7C"/>
                                     <constraint firstItem="gp7-WL-0Kd" firstAttribute="leading" secondItem="vJj-PO-jnr" secondAttribute="trailing" id="BYB-ja-AVi"/>
                                     <constraint firstAttribute="bottom" secondItem="gp7-WL-0Kd" secondAttribute="bottom" constant="6" id="RPU-pR-vvA"/>
@@ -4387,8 +4383,8 @@
                                     <constraint firstItem="aWC-Nt-zKU" firstAttribute="top" secondItem="Kp2-2b-8Ty" secondAttribute="top" constant="5" id="aYK-gP-6AS"/>
                                     <constraint firstItem="aWC-Nt-zKU" firstAttribute="leading" secondItem="IRX-r2-V5c" secondAttribute="trailing" constant="2" id="btW-Ey-wPg"/>
                                     <constraint firstAttribute="height" constant="45" id="fbD-Xt-Y5k"/>
-                                    <constraint firstItem="X92-Kw-LPj" firstAttribute="leading" secondItem="aWC-Nt-zKU" secondAttribute="trailing" constant="5" id="ieA-HX-GuI"/>
-                                    <constraint firstItem="X92-Kw-LPj" firstAttribute="top" secondItem="Kp2-2b-8Ty" secondAttribute="top" constant="8" id="m1d-nc-DeN"/>
+                                    <constraint firstItem="X92-Kw-LPj" firstAttribute="leading" secondItem="aWC-Nt-zKU" secondAttribute="trailing" id="ieA-HX-GuI"/>
+                                    <constraint firstItem="X92-Kw-LPj" firstAttribute="top" secondItem="Kp2-2b-8Ty" secondAttribute="top" id="m1d-nc-DeN"/>
                                     <constraint firstItem="vJj-PO-jnr" firstAttribute="top" secondItem="Kp2-2b-8Ty" secondAttribute="top" constant="8" id="wES-qr-NBp"/>
                                     <constraint firstAttribute="bottom" secondItem="aWC-Nt-zKU" secondAttribute="bottom" constant="6" id="yni-xt-pgd"/>
                                 </constraints>
@@ -4422,6 +4418,7 @@
                         <outlet property="backgroundImage" destination="OtO-Bm-Lo4" id="Qzc-Qq-hnu"/>
                         <outlet property="btn_Camera" destination="vJj-PO-jnr" id="yc6-Wh-5bc"/>
                         <outlet property="chatBar" destination="Kp2-2b-8Ty" id="L5e-fk-CsZ"/>
+                        <outlet property="sendButton" destination="X92-Kw-LPj" id="7eM-WH-cK3"/>
                         <outlet property="tblView_chat" destination="KHf-V1-cZW" id="N2N-xn-w4o"/>
                         <outlet property="txtfld_Message" destination="IRX-r2-V5c" id="M0e-CI-66l"/>
                         <outlet property="userImageInput" destination="t3g-qy-wpX" id="ntQ-cX-EOJ"/>
@@ -5415,6 +5412,6 @@
         <segue reference="eKO-Jt-jF9"/>
         <segue reference="Z8A-5N-zaV"/>
         <segue reference="0b4-Ys-T0R"/>
-        <segue reference="jsj-iR-6fq"/>
+        <segue reference="Mpy-LR-DF4"/>
     </inferredMetricsTieBreakers>
 </document>

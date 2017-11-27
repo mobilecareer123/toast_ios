@@ -24,10 +24,12 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var arr_message:NSMutableArray = NSMutableArray()
     @IBOutlet weak var btn_Camera: UIButton!
     @IBOutlet weak var txtfld_Message: UITextField!
+    @IBOutlet var sendButton: UIButton!
+    
     var cameraUI: UIImagePickerController!
     var selectedImage1: UIImage!
     var screenTag:Int = 0 // 2 for Toast screen, 1 for diary screen
-    @IBOutlet weak var const_textEnterView: NSLayoutConstraint!
+    //@IBOutlet weak var const_textEnterView: NSLayoutConstraint!
     var chatFrame: CGRect?
     
     var selectedToastId:String = String()
@@ -118,7 +120,10 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - Input Acessory disapear
     
     @IBAction func sendMessage(_ sender: Any) {
-        guard let text = txtfld_Message.text else { return }
+        guard let text = txtfld_Message.text else {
+            SVProgressHUD.showInfo(withStatus: "Please enter your cheer.", maskType: .gradient)
+            return
+        }
         if text.trimmingCharacters(in: .whitespaces).isEmpty {
             SVProgressHUD.showInfo(withStatus: "Please enter your cheer.", maskType: .gradient)
             return
@@ -143,6 +148,11 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
         guard let cf = self.chatFrame else { return }
         self.chatBar.frame = cf
         print("===new chat bar frame ===== \(self.chatBar.frame)")
+        
+        var f = sendButton.frame
+        f.size.width = 41
+        f.size.height = 45
+        sendButton.frame = f
     }
     
     override func viewDidLoad() {
@@ -169,7 +179,7 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if(screenTag == 1) // 2 for Toast screen, 1 for diary screen
         {
             view_bgTypeCheer.isHidden = true
-            const_textEnterView.constant = -45.0
+            //const_textEnterView.constant = -45.0
             self.view.layoutIfNeeded()
         }
         
@@ -276,7 +286,13 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         
-        
+        sendButton.layer.borderColor = UIColor.red.cgColor
+        sendButton.layer.borderWidth = 2
+        sendButton.addTarget(self, action: #selector(sendMessage(_:)), for: .touchUpInside)
+        var f = sendButton.frame
+        f.size.width = 41
+        f.size.height = 45
+        sendButton.frame = f
         
     }
     
@@ -602,7 +618,7 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if(toastDict["toast_id"] as! String == self.selectedToastId)
         {
             self.view_bgTypeCheer.isHidden = true
-            self.const_textEnterView.constant = -45.0
+            //self.const_textEnterView.constant = -45.0
             self.screenTag = 1
         }
     }
@@ -766,6 +782,7 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.btn_Camera.isUserInteractionEnabled = true
         self.txtfld_Message.isUserInteractionEnabled = true
         self.view_bgTypeCheer.isUserInteractionEnabled = true
+        self.sendButton.isUserInteractionEnabled = true
         
 //        let recognizer_ChatTxt = UITapGestureRecognizer(target: self, action: #selector(TChatViewController.WriteMsgTapped))
         //self.view_bgTypeCheer.addGestureRecognizer(recognizer_ChatTxt)
@@ -839,7 +856,7 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         if(self.screenTag == 1)
                         {
                             self.view_bgTypeCheer.isHidden = true
-                            self.const_textEnterView.constant = -45.0
+                            //self.const_textEnterView.constant = -45.0
                             // self.view.layoutIfNeeded()
                         }
                         else

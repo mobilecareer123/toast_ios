@@ -1014,6 +1014,8 @@ class TViewToastDetailVC: UIViewController, UITableViewDelegate, UITableViewData
                 {
                     let toastURL: URL = URL(string: viewToastObj.toastImageURL)!
                     cell?.imgView_Toast.af_setImage(withURL: toastURL)
+                } else {
+                    cell?.imgView_Toast.image = nil
                 }
                 
                 cell?.lbl_ToastToPeopleName.text = viewToastObj.toastTitle
