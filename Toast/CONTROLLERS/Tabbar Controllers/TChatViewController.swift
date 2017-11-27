@@ -285,9 +285,6 @@ class TChatViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        
-        sendButton.layer.borderColor = UIColor.red.cgColor
-        sendButton.layer.borderWidth = 2
         sendButton.addTarget(self, action: #selector(sendMessage(_:)), for: .touchUpInside)
         var f = sendButton.frame
         f.size.width = 41
